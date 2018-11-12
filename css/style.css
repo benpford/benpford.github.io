@@ -1,0 +1,255 @@
+/* Font Awesome */
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* Google Font - Nunito and Space Mono */
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+* {
+	-webkit-transition: all 0.15s ease-in-out;
+	-moz-transition: all 0.15s ease-in-out;
+	transition: all 0.15s ease-in-out;
+}
+
+/* 
+Blue: #545EEE
+Light Blue: #B3B7F0;
+Red: #FF4D5B;
+Light Red: #F6C0C4;
+Not-quite-black: #2B2B2B;
+Light-grey: #99999a;
+Off-white: #FAFAFA;
+*/
+
+html {
+	padding: 4% 4%;
+	margin:0;
+}
+
+body {
+	font-family: 'Source Code Pro', monospace;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 26px;
+	letter-spacing: 0.03em;
+	color: #FFFFFF;
+	background-color: #1D1D1D;
+	}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, span, blockquote {
+    margin: 0;
+	padding: 0;
+}
+
+
+h1 {
+	display: inline-block;
+	font-size: 1.3em;
+	font-weight: 500;
+	letter-spacing: 0.05em;
+	color: #FFFFFF;
+	font-style: italic;
+}
+
+h3 {
+    font-size: 0.7em;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    color: #99999a;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: #FFFFFF;
+	text-decoration: none;
+	border-bottom: 1px solid #FFFFFF;
+}
+
+	a:hover {
+		color: #545EEE; 
+		border-bottom: 1px solid #545EEE; 
+		font-style: italic;
+	}
+
+	a:active {
+		color: #545EEE;
+		font-size: 110%;
+		line-height: 95%;
+	}
+
+hr {
+	border: 0;
+	height: 1px;
+	background: #DFDFDF;
+	margin-top: 40px;
+}
+
+.container {
+	width:100%; 
+	margin-top:40px;
+}
+
+.container.intro {}
+	
+	span.more {
+		display: none;
+	}
+	
+	a.more {
+		color: #FFFFFF; 
+		border-bottom: 1px solid #FFFFFF; 
+		cursor: pointer;
+	}
+	
+	a.more:hover {
+		color: #FF4D5B; 
+		border-bottom:1px solid #FF4D5B; 
+		font-style: italic;
+	}
+
+.container.experience {
+	width:100%;
+}
+
+.container.articles {
+	width:100%;
+}
+	.container.articles p:before {
+		content:'\002192'; 
+		padding-right: 6px;
+	}
+
+.container.websites {
+	width:100%; 
+	margin-left: 0;
+}
+	.container.websites p:before {
+		content:'\002192'; 
+		padding-right: 6px;
+	}
+
+.container.instagram {
+	width:100%;
+}
+	.container.instagram a {
+		border:0;
+	}
+	.container.instagram img {
+		width: 45%; 
+		margin: 2.5%; 
+		opacity:1;
+	}	
+	.container.instagram a:nth-child(odd) img {
+		margin-left: 0%;
+	}
+	.container.instagram a:hover {
+		opacity: 0.25; 
+		cursor: url('../images/cursors/instagram.png'), auto;
+	}
+	#instafeed {
+		width: 100%;
+	}
+
+ul {
+	list-style:none; 
+	padding:0; 
+	margin:0;
+}
+
+ul.experience {
+	list-style: none; 
+	padding: 0;
+}
+	ul.experience li {
+		display: block;
+	}
+	ul.experience span.year {
+		color: #99999a; font-size: 0.7em;
+	}
+
+ul.social {
+	display: block; 
+	list-style: none; 
+	margin: 2em 0 2em 0; 
+	padding: 0;
+}
+	ul.social li {
+		display: inline-block;
+	}
+	ul.social li a {
+		border-bottom: 0px solid #FFFFFF; 
+		padding: 0 10px; 
+		font-size: 1.4em;
+	}
+	ul.social li:first-of-type a {
+		padding-left: 0px;
+	}
+	ul.social li span.text {
+		display: none;
+	}
+	ul.social li a i.fa.fa-envelope-o {
+		font-size: 92%;  /* Making envelope icon same height as other icons */
+	}
+
+/* 
+Small devices (landscape phones, 576px and up) 
+*/
+@media (min-width: 576px) { 
+	html{padding: 2% 5%;}
+	.container {width:70%;}
+	ul.social {float: right; margin: 0;}
+	ul.social li {display: block;}
+	ul.social li a {color: #FFFFFF; padding: 0; font-size: 1em; border-bottom: 1px solid #FFFFFF;}
+	ul.social li a i {display:none;}
+	ul.social li a span.text {display: inline-block; transition: 0s;}
+	ul.social li a:hover {color: #545EEE; border-bottom: 1px solid #545EEE;}
+}
+
+
+/*
+Medium devices (tablets, 768px and up) 
+*/
+@media (min-width: 768px) {
+	.container {width:50%; margin-top: 60px; vertical-align: top;}
+	header {margin-top: 20px;}
+	.container.intro {margin-top: 40px;}
+	.container.articles {display:inline-block; padding: 0 2.5% 0 0; width:40%;}
+	.container.websites {display:inline-block; padding: 0 0 0 2.5%; width:50%;}
+	.container.instagram {width:100%;}
+		.container.instagram a {border:0;}
+		.container.instagram img {width: 12.5%; margin: 4% 2.5% 0% 2.5%; opacity:1;}
+		.container.instagram a:nth-child(odd) img {margin: 4% 2.5% 0% 2.5%;}
+		.container.instagram a:nth-child(1) img {margin-left: 0%;}
+		.container.instagram a:nth-child(6) img {margin-right: 0%;}
+		.container.instagram a:nth-child(7) img {margin-left: 0%;}
+		.container.instagram a:nth-child(12) img {margin-right: 0%;}
+		.container.instagram a:nth-child(13) img {margin-left: 0%;}
+		.container.instagram a:nth-child(18) img {margin-right: 0%;}
+		.container.instagram a:nth-child(-n+6) img {margin-top: 0%;}
+}
+
+/*
+Large devices (desktops, 992px and up)
+*/
+@media (min-width: 992px) {
+	.container {width:50%;}
+	.container.articles {width:40%;}
+	.container.websites {width:45%;}
+}
+
+
+/*
+Extra large devices (large desktops, 1200px and up)
+*/
+@media (min-width: 1500px) { 
+	.container {width:30%;}
+	.container.articles {width:35%;}
+	.container.websites {width:50%;}
+}
+

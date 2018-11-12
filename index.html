@@ -1,7 +1,169 @@
 <!DOCTYPE html>
 <html>
+<head>
+<title>Ben Ford</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Ben Ford is a Hampshire-based user experience (UX) designer.">
+<meta name="keywords" content="Ben Ford, UX, User Experience Design, London, Berkshire, Hampshire, Cornwall, Saatchi and Saatchi, Pulselive">
+
+<!-- Custom CSS -->
+<link href="css/style.css?240420171634" rel="stylesheet">
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Favicon -->
+<link href="/images/favicon.ico" rel="icon" type="image/x-icon" />
+<link href="/images/favicon.png" rel="icon" type="image/png" />
+
+<!-- Tumblr Post -->
+<script type="text/javascript" src="tumblr.js"></script>
+
+<!-- Instagram Feed -->
+<script type="text/javascript" src="instafeed.js"></script>
+
+<script>
+$(document).ready(function(){
+	$("a.more").click(function(){
+	    $("span.more").toggle();
+	    $(this).text(function(i, text){
+          return text === "and more..." ? " " : "and more...";
+      	})
+	});
+});
+</script>
+
+<script type="text/javascript">
+	var feed = new Instafeed({
+		get: 'user',
+		userId: '3605597',
+		accessToken: '3605597.1677ed0.e08c94be61d540d99e199dc6d2707076',
+		limit: '18',
+		resolution: 'standard_resolution',
+	});
+	feed.run();
+</script>
+
+<script>
+$(document).ready(function() {
+	if ($(".container.articles").length > 0) {
+	fetchLatestTumblrPost();
+	}
+});
+</script>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<header>
+	<h1>Ben Ford</h1>
+		<ul class="social">
+			<li>
+				<a href="mailto:hello@benpford.co.uk" rel="external" title="Email" alt="Email">
+					<i class="fa fa-envelope-o"></i>
+					<span class="text">Email</span>
+				</a>
+			</li>
+			<li>
+				<a href="http://twitter.com/benpford" rel="external" title="Twitter" alt="Twitter">
+					<i class="fa fa-twitter"></i>
+					<span class="text">Twitter</span>
+				</a>
+			</li>
+			<li>
+				<a href="http://instagram.com/benpford" rel="external" title="Instagram" alt="Instagram">
+					<i class="fa fa-instagram"></i>
+					<span class="text">Instagram</span>
+				</a>
+			</li>
+			<li>
+				<a href="http://pinterest.com/benpford" rel="external" title="Pinterest" alt="Pinterest">
+					<i class="fa fa-pinterest"></i>
+					<span class="text">Pinterest</span>
+				</a>
+			</li>
+			<li>
+				<a href="http://player.spotify.com/user/1175682270" rel="external" title="Spotify" alt="Spotify">
+					<i class="fa fa-spotify"></i>
+					<span class="text">Spotify</span>
+				</a>
+			</li>
+			<li>
+				<a href="http://dribbble.com/benpford" rel="external" title="Dribbble" alt="Dribbble">
+					<i class="fa fa-dribbble"></i>
+					<span class="text">Dribbble</span>
+				</a>
+			</li>
+		</ul>
+</header>
+
+<div class="container intro">
+<p>I'm a user experience designer with over five years of agency experience working working with clients such as Premier League, Red Bull, Visa, HSBC, Ray-Ban, 
+	<a class="more" onClick="ga('send', {'hitType':'event', 'eventCategory':'MoreLink', 'eventAction': 'Click', 'eventLabel': 'ClickOnMoreLink' });">and more...</a>
+	<span class="more">Toyota, Deutsche Telekom, Rekorderlig, Skoda, Head &amp; Shoulders, British Gas, Virgin Galactic, World Rugby, International Cricket Council, Indian Premier League, Australian Football League, Harlequins RFC, Weight Watchers, Richmond, Mr Kipling, Anchor, Cravendale, Nominet, Queen.</span></p>
+</div>
+
+<div class="container experience">
+	<h3>Experience</h3>
+	<ul class="experience">
+		<li>
+			<span class="year">2016</span>
+			<span class="role">UX Designer
+				<a href="http://pulselive.com" rel="external" title="Pulselive" alt="Pulselive"> Pulselive</a>
+			</span>
+		</li>
+		<li>
+			<span class="year">2013 - 2016</span>
+			<span class="role">UX Designer
+				<a href="http://saatchi.co.uk" rel="external" title="Saatchi & Saatchi" alt="Saatchi & Saatchi">Saatchi &amp; Saatchi</a>
+			</span>
+		</li>
+		<li>
+			<span class="year">2012 - 2013</span>
+			<span class="role">UX Designer
+				<a href="http://outsideline.co.uk" rel="external" title="Outside Line" alt="Outside Line">Outside Line</a>
+			</span>
+		</li>
+		<li>
+			<span class="year">2009 - 2012</span>
+			<span class="role">Graduated
+				<a href="http://www.solent.ac.uk/courses/2016/undergraduate/business-information-technology-bsc/course-details.aspx" rel="external" title="Southampton Solent University" alt="Southampton Solent University">SSU</a>
+			</span>
+		</li>
+	</ul>
+</div>
+
+<div class="container articles">
+	<h3>Recently liked articles</h3>
+</div>
+<div class="container websites">
+	<h3>Recently liked websites</h3>
+</div>
+
+<div class="container instagram">
+	<h3>Instagram</h3>
+	<div id="instafeed">
+	</div>
+</div>
+
+<script>
+	$('A[rel="external"]')
+	.click( function() {
+	window.open( $(this).attr('href') );
+	return false;
+	});
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42468379-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
 </body>
 </html>
