@@ -5,7 +5,7 @@
 var fetchLatestTumblrPost = function() {
 
 	// Fetch the feed with Tumblr API v1
-	$.getJSON("http://benpford.tumblr.com/api/read/json?num=5&type=link&callback=?", function(data) {
+	$.getJSON("https://benpford.tumblr.com/api/read/json?num=5&type=link&callback=?", function(data) {
 
 		// For each post in the returned data
 		$.each(data.posts, function(i, posts) {
@@ -27,7 +27,7 @@ var fetchLatestTumblrPost = function() {
 	});
 	
 	// Fetch the feed with Tumblr API v1
-	$.getJSON("http://benpford.tumblr.com/api/read/json?num=5&type=photo&callback=?", function(data) {
+	$.getJSON("https://benpford.tumblr.com/api/read/json?num=5&type=photo&callback=?", function(data) {
 
 		// For each post in the returned data
 		$.each(data.posts, function(i, posts) {
