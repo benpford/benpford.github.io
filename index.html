@@ -9,7 +9,7 @@
 <meta name="keywords" content="Ben Ford, UX, User Experience Design, London, Berkshire, Hampshire, Cornwall, Saatchi and Saatchi, Pulselive">
 
 <!-- Custom CSS -->
-<link href="css/style.css?240420171634" rel="stylesheet">
+<link href="css/style.css?24112018" rel="stylesheet">
 
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -26,10 +26,30 @@
 
 <script>
 $(document).ready(function(){
-	$("a.more").click(function(){
-	    $("span.more").toggle();
+	$("a.more.pulse").click(function(){
+	    $("span.more.pulse").toggle();
 	    $(this).text(function(i, text){
-          return text === "and more..." ? " " : "and more...";
+          return text === " ← " ? " → " : " ← ";
+      	})
+	});
+});
+</script>
+<script>
+$(document).ready(function(){
+	$("a.more.saatchi").click(function(){
+	    $("span.more.saatchi").toggle();
+	    $(this).text(function(i, text){
+          return text === " ← " ? " → " : " ← ";
+      	})
+	});
+});
+</script>
+<script>
+$(document).ready(function(){
+	$("a.more.osl").click(function(){
+	    $("span.more.osl").toggle();
+	    $(this).text(function(i, text){
+          return text === " ← " ? " → " : " ← ";
       	})
 	});
 });
@@ -98,30 +118,35 @@ $(document).ready(function() {
 </header>
 
 <div class="container intro">
-<p>I'm a user experience designer with over five years of agency experience working with clients such as Premier League, Red Bull, Visa, HSBC, Ray-Ban, 
-	<a class="more" onClick="ga('send', {'hitType':'event', 'eventCategory':'MoreLink', 'eventAction': 'Click', 'eventLabel': 'ClickOnMoreLink' });">and more...</a>
-	<span class="more">Toyota, Deutsche Telekom, Rekorderlig, Skoda, Head &amp; Shoulders, British Gas, Virgin Galactic, World Rugby, International Cricket Council, Indian Premier League, Australian Football League, Harlequins RFC, Weight Watchers, Richmond, Mr Kipling, Anchor, Cravendale, Nominet, Queen.</span></p>
+<p>I'm a Hampshire-based digital product designer specialising in user experience design.</p><p>With over six years of professional experience at world-renowned and industry-leading agencies, I've been fortunate enough to work alongside talented colleagues on some of the biggest brands in the world.
+	</p>
 </div>
 
 <div class="container experience">
 	<h3>Experience</h3>
 	<ul class="experience">
 		<li>
-			<span class="year">2016</span>
-			<span class="role">UX Designer
-				<a href="http://pulselive.com" rel="external" title="Pulselive" alt="Pulselive"> Pulselive</a>
+			<span class="year">2016&nbsp;</span>
+			<span class="role">Senior UX Designer
+				<a href="http://pulselive.com" rel="external" title="Pulselive" alt="Pulselive">Pulselive</a>
+				<a class="more pulse" onClick="ga('send', {'hitType':'event', 'eventCategory':'MoreLink', 'eventAction': 'Click', 'eventLabel': 'ClickOnMoreLink' });"> → </a>
+				<span class="more pulse">Premier League, FC Barcelona, Leicester City FC, Liverpool FC, Aussie Rules Football League, BCCI, ICC, ECB, Goodwood, World Rugby</span>
 			</span>
 		</li>
 		<li>
 			<span class="year">2013 - 2016</span>
 			<span class="role">UX Designer
 				<a href="http://saatchi.co.uk" rel="external" title="Saatchi & Saatchi" alt="Saatchi & Saatchi">Saatchi &amp; Saatchi</a>
+				<a class="more saatchi" onClick="ga('send', {'hitType':'event', 'eventCategory':'MoreLink', 'eventAction': 'Click', 'eventLabel': 'ClickOnMoreLink' });"> → </a>
+				<span class="more saatchi">Toyota, HSBC, Visa, Ray-Ban, Skoda, Deutsche Telekom, Head &amp; Shoulders, Weight Watchers, Harlequins RFC, Nominet</span>
 			</span>
 		</li>
 		<li>
 			<span class="year">2012 - 2013</span>
 			<span class="role">UX Designer
 				<a href="http://outsideline.co.uk" rel="external" title="Outside Line" alt="Outside Line">Outside Line</a>
+				<a class="more osl" onClick="ga('send', {'hitType':'event', 'eventCategory':'MoreLink', 'eventAction': 'Click', 'eventLabel': 'ClickOnMoreLink' });"> → </a>
+				<span class="more osl">Red Bull, British Gas, Mr Kipling, Anchor, Cravendale, Queen, Lurpak</span>
 			</span>
 		</li>
 		<li>
