@@ -3,6 +3,7 @@
 
 /* Google Font - Nunito and Space Mono */
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
 
 * {
 	-webkit-transition: all 0.15s ease-in-out;
@@ -22,17 +23,17 @@ Off-white: #FAFAFA;
 
 html {
 	padding: 4% 4%;
-	margin:0;
+	margin:0 auto;
+	max-width: 1200px;
 }
 
 body {
-	font-family: 'Source Code Pro', monospace;
-	font-weight: 500;
+	font-family: 'Fira Sans', sans-serif;
+	font-weight: 400;
 	font-size: 16px;
-	line-height: 26px;
-	letter-spacing: 0.03em;
+	line-height: 32px;
 	color: #FFFFFF;
-	background-color: #1D1D1D;
+	background-color: #0d0d0d;
 	}
 
 h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, span, blockquote {
@@ -42,6 +43,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, span, blockquote {
 
 
 h1 {
+	font-family: 'Source Code Pro', monospace;
 	display: inline-block;
 	font-size: 1.3em;
 	font-weight: 500;
