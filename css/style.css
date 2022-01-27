@@ -169,6 +169,7 @@ ul.social {
 		display: inline-block;
 		width: 48px;
 		height: 48px;
+		margin-bottom: 0.5rem;
 	}
 	ul.social li a {
 		color: #495456;
