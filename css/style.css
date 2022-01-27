@@ -86,6 +86,20 @@ hr {
 	margin-top: 40px;
 }
 
+img.mugshot {
+	display: inline-block;
+	height: 72px;
+	width: 72px;
+	object-fit:cover;
+	border-radius: 50%;
+	background: #99999a;
+	filter: grayscale(80%);
+}
+
+	img.mugshot:hover {
+		filter: grayscale(0%);
+	}
+
 .container {
 	width:100%; 
 	margin-top:40px;
