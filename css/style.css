@@ -155,6 +155,9 @@ ul.experience {
 	ul.experience li {
 		display: block;
 	}
+	ul.experience li.progression {
+    	padding-left: 0.5rem;
+	}
 	ul.experience span.year {
 		color: #99999a; font-size: 0.7em;
 	}
