@@ -88,6 +88,11 @@ hr {
 	margin-top: 40px;
 }
 
+sup {
+    font-size: 0.5rem;
+    line-height: 20px;
+}
+
 img.mugshot {
 	display: inline-block;
 	height: 72px;
